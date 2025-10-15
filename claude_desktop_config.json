@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+   "count-r": {
+			"command": "/Users/alex/Documents/Apprenticeship/Matthew_Berman_MCP/.venv/bin/python3",
+			"args": [
+				"/Users/alex/Documents/Apprenticeship/Matthew_Berman_MCP/server.py"
+			]
+		}
+  }
+}
