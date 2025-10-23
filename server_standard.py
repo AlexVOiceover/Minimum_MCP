@@ -40,3 +40,10 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+# FastMCP automatically converts:
+# - Function name → tool name
+# - Type hints → input schema
+# - Docstring → description
+# - Return type → response format

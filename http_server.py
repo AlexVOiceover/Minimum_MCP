@@ -5,7 +5,7 @@ import uvicorn
 app = FastAPI()
 
 class ToolRequest(BaseModel):
-    word: str
+    sentence: str
 
 @app.get("/")
 async def root():
@@ -13,7 +13,8 @@ async def root():
 
 @app.post("/count_r")
 async def count_r(request: ToolRequest):
-    count = request.word.lower().count("r")
+    print(f"count_r called with sentence: {request.sentence}")
+    count = request.sentence.lower().count("r")
     return {"result": count}
 
 if __name__ == "__main__":

@@ -1,9 +1,10 @@
 import requests
 
 def main():
-    # Test the server
+    sentence = input("Enter a sentence to count 'r' letters: ")
+
     response = requests.post("http://localhost:8000/count_r",
-                           json={"word": "strawberry"})
+                           json={"sentence": sentence})
 
     if response.status_code == 200:
         result = response.json()

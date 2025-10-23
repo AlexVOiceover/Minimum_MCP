@@ -4,6 +4,11 @@ import requests
 mcp = FastMCP("api-example")
 
 @mcp.tool()
+def count_r(sentence: str) -> int:
+    """Count the number of 'r' letters in a given sentence."""
+    return sentence.lower().count("r")
+
+@mcp.tool()
 def get_joke() -> str:
     """Get a random joke from an API."""
     try:
